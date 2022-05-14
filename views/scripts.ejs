@@ -1,0 +1,71 @@
+<!-- Jquery -->
+<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+
+<!-- Modernizr JS -->
+<script type="text/javascript" src="/javascripts/modernizr.min.js"></script>
+
+<!-- WOW JS -->
+<script type="text/javascript" src="/javascripts/wow.min.js"></script>
+
+<!-- Fancybox js -->
+<script type="text/javascript" src="/javascripts/jquery.fancybox.min.js"></script>
+
+<!-- Animate Text JS -->
+<script type="text/javascript" src="/javascripts/animate-text.js"></script>
+
+<!-- Mobile Menu JS -->
+<script type="text/javascript" src="/javascripts/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Parallax -->
+<script type="text/javascript" src="/javascripts/jquery.stellar.min.js"></script>
+
+<!-- Jquery Easing -->
+<script type="text/javascript" src="/javascripts/easing.js"></script>
+
+<!-- One Page Nav JS -->
+<script type="text/javascript" src="/javascripts/jquery.nav.js"></script>
+
+<!-- Slider Carousel JS -->
+<script type="text/javascript" src="/javascripts/owl.carousel.min.js"></script>
+
+<!-- Youtube Player JS -->
+<script type="text/javascript" src="/javascripts/ytplayer.min.js"></script>
+
+<!-- Particle JS -->
+<script type="text/javascript" src="/javascripts/particles.min.js"></script>
+
+<!-- Counter JS -->
+<script type="text/javascript" src="/javascripts/waypoints.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.counterup.min.js"></script>
+
+<!-- Mixitup JS -->
+<script type="text/javascript" src="/javascripts/isotope.pkgd.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+
+<!-- Main JS -->
+<script type="text/javascript" src="/javascripts/main.js"></script>
+
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'service_Robert';
+            const templateID = 'template_gx96xb8';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'ENVIAR';
+                    alert('Mensaje enviado correctamente!');
+                }, (err) => {
+                    btn.value = 'ENVIAR';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
