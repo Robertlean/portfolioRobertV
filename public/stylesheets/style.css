@@ -1024,6 +1024,7 @@ Version:	1.1
 	transform:scale(1.1);
 }
 #portfolio .portfolio-hover {
+	width:100%;
 	position: absolute;
 	top: 0;
 	z-index: 20;
@@ -1266,6 +1267,82 @@ Version:	1.1
 /*=======================
     End Portfolio
 =========================*/
+
+
+/*=======================
+  Call to action CSS
+=========================*/ 
+#call-action {
+	position: relative;
+	overflow: hidden;
+	background-image: url('http://via.placeholder.com/1500x800');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+#call-action::after {
+	position: absolute;
+	top: 20px;
+	content: "";
+	width: 80%;
+	height: 330px;
+	background: #000;
+	left: 50%;
+	opacity: 0.8;
+	margin-left: -40%;
+	transform: rotate(6deg);
+	border-radius: 10px;
+	z-index: -2;
+}
+#call-action::before {
+	position: absolute;
+	top: 20px;
+	content: "";
+	width: 80%;
+	height: 330px;
+	left: 50%;
+	opacity: 0.8;
+	margin-left: -40%;
+	transform: rotate(-6deg);
+	border-radius: 10px;
+	z-index: -2;
+}
+#call-action .call-action-main {
+	text-align: center;
+	z-index: 5;
+}
+#call-action .call-action-main h2 {
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	font-size: 34px;
+	position: relative;
+	overflow:hidden;
+	display: inline-block;
+}
+#call-action .call-action-main p {
+	color: #fff;
+	font-size: 14px;
+	padding: 0 80px;
+}
+#call-action .call-action-main .button{
+	margin-top: 25px;
+}
+#call-action .call-action-main .button i{
+	margin-right:5px;
+}
+#call-action .btn {
+	margin: 0;
+	background: #fff;
+	color: #353535;
+}
+#call-action .btn:hover{
+	color:#fff;
+}
+/*=======================
+  End Call to action
+=========================*/ 
+
 
 /*=======================
 	CountDown CSS
