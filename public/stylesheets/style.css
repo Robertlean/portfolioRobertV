@@ -383,6 +383,15 @@ Version:	1.1
 #header.normal .logo a {
 	color: #353535;
 }
+@media (max-width: 425px){
+	#header .logo a{
+		font-size:1.2em
+	}
+}
+#header .logo a::before{
+	top: 6px
+}
+
 /*=======================
 	End Header
 =========================*/ 
@@ -470,8 +479,8 @@ Version:	1.1
 	background: #fff;
 	color: #353535;
 	margin-right: 20px;
-	padding: 13px 35px;
-	overflow:hidden;
+	padding: 13px auto;
+	overflow: hidden;
 }
 #personal-area .personal-text .btn:hover{
 	color:#fff;
@@ -660,6 +669,11 @@ Version:	1.1
 }
 #personal-area.video_player .personal-single::before {
 	opacity: 0.3;
+}
+@media (max-width:320px){
+	#personal-area .personal-text h1{
+		font-size: 40px;
+	}
 }
 /*=======================
 	End Personal
@@ -1275,7 +1289,7 @@ Version:	1.1
 #call-action {
 	position: relative;
 	overflow: hidden;
-	background-image: url('http://via.placeholder.com/1500x800');
+	background-image: url('/images/banner-violeta-bulma.jpg');
 	background-size: cover;
 	background-position: center;
 	z-index: 1;
@@ -1468,6 +1482,11 @@ Version:	1.1
 	-moz-box-shadow: 1px 1px 6px rgba(20, 20, 20, 0.4);
 	box-shadow: 1px 1px 6px rgba(20, 20, 20, 0.4);
 }
+@media (max-width: 425px){
+	#my-timeline .single-timeline .single-content {
+		padding:10px
+	}
+}
 #my-timeline .single-main:nth-child(2n) .single-timeline .single-content {
 	margin-left: 50.4%;
 }
@@ -1503,15 +1522,15 @@ Version:	1.1
 }
 #my-timeline .single-timeline .date {
 	position: absolute;
-	right: -90px;
+	right: -105px;
 	padding: 5px;
 	border-radius: 5px;
-	width: 60px;
+	width: 92px;
 	text-align: center;
 	font-weight: 700;
 }
 #my-timeline .single-main:nth-child(2n) .single-timeline .date {
-	left: -93px;
+	left: -110px;
 	right: auto;
 }
 #my-timeline .single-timeline .date p{
@@ -1521,6 +1540,14 @@ Version:	1.1
 @media (max-width: 768px) {
 	#my-timeline .single-timeline .date p{
 		font-size: .7em;
+	}
+}
+@media (max-width:425px){
+	.clip{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 }
 
@@ -1791,6 +1818,11 @@ Version:	1.1
 #contact .single-address p{
 	color:#555;
 }
+@media (max-width:768px){
+	.fadeInRight{
+		top:3.5em
+	}
+}
 /*=======================
   End Contact
 =========================*/
@@ -1821,6 +1853,7 @@ Version:	1.1
 #clients.style2{
 	padding:80px 0;
 }
+
 /*=======================
   End Clients
 =========================*/
